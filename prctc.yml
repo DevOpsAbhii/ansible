@@ -3,3 +3,8 @@
   tasks:
     - name: run echo command
       command: /bin/echo hello k!
+
+- name: Creates directory
+  file:
+    path: /home/abhi/ans
+    state: directory
