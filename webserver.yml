@@ -6,15 +6,23 @@
    # apt:
     #  name: apache2
      # state: present
-  - name: start webserver
+  - name: start webserver on linux
     service:
       name: apache2
       state: started
+  
   - name: install webserver on Amazon linux
     yum:
       name: httpd
       state: present
       when: ansible-os-family=="RedHat"
+
+  - name: start webserver on Amazon
+    service: 
+      name: httpd
+      state: started
+      when: ansible-os-family=="RedHat"
+      
   - name:
     service: 
       name: httpd
