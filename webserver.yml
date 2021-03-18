@@ -2,10 +2,10 @@
 - hosts : allservers
   become: yes
   tasks:
-  - name: install webserver on Ubuntu
-    apt:
-      name: apache2
-      state: present
+  #- name: install webserver on Ubuntu
+   # apt:
+    #  name: apache2
+     # state: present
   - name: start webserver
     service:
       name: apache2
