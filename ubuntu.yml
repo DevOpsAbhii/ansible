@@ -1,0 +1,11 @@
+---
+- hosts: allservers
+- name: run this on Ubuntu
+  debug: msg="this runs only on Ubuntu
+  when: "'ubuntu' in {{group_names}}"
+
+- name: run this on amazon
+  debug: msg="this runs only on amazon linux
+  when: "'amazon' in {{group_names}}"
+
+  
