@@ -14,11 +14,11 @@
   - name: install webserver on Amazon linux
     yum:
       name: httpd
-      state: present
-      when: ansible-os-family=="RedHat"
+      state: latest
+      #when: ansible-os-family=="RedHat"
 
   - name: start webserver on Amazon
     service: 
       name: httpd
       state: started
-      when: ansible-os-family=="RedHat"
+      #when: ansible-os-family=="RedHat"
