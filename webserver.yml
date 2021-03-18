@@ -13,14 +13,14 @@
   
   - name: install webserver on Amazon linux
     dnf:
-    yum:
+    #yum:
       name: httpd
       state: latest
       #when: ansible-os-family=="RedHat"
 
   - name: start webserver on Amazon
     dnf:
-    service: 
-      name: httpd
-      state: started
+      service: 
+        name: httpd
+        state: started
       #when: ansible-os-family=="RedHat"
